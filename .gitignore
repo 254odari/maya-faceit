@@ -107,6 +107,7 @@ mediapipe-0.10.35.dist-info/
 share/
 mpl_toolkits/
 mayafaceit/
+cv2/
 # IDE
 .vscode/
 .idea/
