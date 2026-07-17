@@ -1,0 +1,1637 @@
+{
+  "database": {
+    "name": "FACS Action Unit Database",
+    "version": "2.0.0",
+    "schema_version": "1.0.0",
+    "format_version": 1,
+    "created": "2026-07-09",
+    "modified": "2026-07-09",
+    "description": "Facial Action Coding System database used by maya_faceit.",
+    "source": "Ekman & Friesen FACS",
+    "action_unit_count": 46
+  },
+  "metadata": {
+    "name": "maya_faceit",
+    "version": "1.0.0",
+    "build": "Alpha",
+    "author": "maya_faceit",
+    "license": "MIT",
+    "maya_version": 2026,
+    "python_version": "3.11"
+  },
+  "statistics": {
+    "total_action_units": 46,
+    "upper_face": 18,
+    "mid_face": 8,
+    "lower_face": 20,
+    "mapped_to_arkit": 46,
+    "combination_units": 15
+  },
+  "categories": {
+    "Brows": {
+      "order": 1,
+      "color": "#A16207"
+    },
+    "Eyes": {
+      "order": 2,
+      "color": "#2563EB"
+    },
+    "Cheeks": {
+      "order": 3,
+      "color": "#16A34A"
+    },
+    "Nose": {
+      "order": 4,
+      "color": "#DC2626"
+    },
+    "Jaw": {
+      "order": 5,
+      "color": "#7C3AED"
+    },
+    "Mouth": {
+      "order": 6,
+      "color": "#EA580C"
+    },
+    "Tongue": {
+      "order": 7,
+      "color": "#DB2777"
+    }
+  },
+  "regions": {
+    "Upper Face": ["Brows", "Eyes"],
+    "Mid Face": ["Nose", "Cheeks"],
+    "Lower Face": ["Jaw", "Mouth", "Tongue"]
+  },
+  "emotion_presets": {
+    "Smile": {
+      "action_units": ["AU6", "AU12"]
+    },
+    "Surprise": {
+      "action_units": ["AU1", "AU2", "AU5", "AU26"]
+    },
+    "Anger": {
+      "action_units": ["AU4", "AU5", "AU7", "AU23"]
+    },
+    "Disgust": {
+      "action_units": ["AU9", "AU10", "AU17"]
+    },
+    "Fear": {
+      "action_units": ["AU1", "AU2", "AU4", "AU5", "AU20", "AU26"]
+    },
+    "Sadness": {
+      "action_units": ["AU1", "AU4", "AU15", "AU17"]
+    },
+    "Contempt": {
+      "action_units": ["AU12", "AU14"]
+    }
+  },
+  "validation": {
+    "strict_schema": true,
+    "allow_unknown_aus": false,
+    "allow_duplicate_ids": false,
+    "case_sensitive": true
+  },
+  "version": {
+    "current_version": "2.0.0",
+    "supported_versions": ["1.0.0", "2.0.0"]
+  },
+  "ui": {
+    "theme": "dark",
+    "display_muscles": true,
+    "display_descriptions": true,
+    "display_categories": true,
+    "display_regions": true
+  },
+  "units": [
+    {
+      "id": 1,
+      "action_unit": "AU1",
+      "name": "Inner Brow Raiser",
+      "category": "Brows",
+      "region": "Upper Face",
+      "description": "Raises the inner portion of the eyebrows.",
+      "muscle": ["Frontalis (medial)"],
+      "arkit": [
+        {
+          "blendshape": "browInnerUp",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au1",
+        "order": 1
+      }
+    },
+    {
+      "id": 2,
+      "action_unit": "AU2",
+      "name": "Outer Brow Raiser",
+      "category": "Brows",
+      "region": "Upper Face",
+      "description": "Raises the outer portion of the eyebrows.",
+      "muscle": ["Frontalis (lateral)"],
+      "arkit": [
+        {
+          "blendshape": "browOuterUpLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "browOuterUpRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au2",
+        "order": 2
+      }
+    },
+    {
+      "id": 3,
+      "action_unit": "AU4",
+      "name": "Brow Lowerer",
+      "category": "Brows",
+      "region": "Upper Face",
+      "description": "Lowers and draws the eyebrows together.",
+      "muscle": ["Corrugator Supercilii", "Depressor Supercilii"],
+      "arkit": [
+        {
+          "blendshape": "browDownLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "browDownRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au4",
+        "order": 3
+      }
+    },
+    {
+      "id": 4,
+      "action_unit": "AU5",
+      "name": "Upper Lid Raiser",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Raises the upper eyelids.",
+      "muscle": ["Levator Palpebrae Superioris"],
+      "arkit": [
+        {
+          "blendshape": "eyeWideLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeWideRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au5",
+        "order": 4
+      }
+    },
+    {
+      "id": 5,
+      "action_unit": "AU6",
+      "name": "Cheek Raiser",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "description": "Raises the cheeks and narrows the eyes.",
+      "muscle": ["Orbicularis Oculi (orbital)"],
+      "arkit": [
+        {
+          "blendshape": "cheekSquintLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "cheekSquintRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au6",
+        "order": 5
+      }
+    },
+    {
+      "id": 6,
+      "action_unit": "AU7",
+      "name": "Lid Tightener",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Tightens the eyelids.",
+      "muscle": ["Orbicularis Oculi (palpebral)"],
+      "arkit": [
+        {
+          "blendshape": "eyeSquintLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeSquintRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au7",
+        "order": 6
+      }
+    },
+    {
+      "id": 7,
+      "action_unit": "AU8",
+      "name": "Lips Together",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Presses lips together.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthClose",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au8",
+        "order": 7
+      }
+    },
+    {
+      "id": 8,
+      "action_unit": "AU9",
+      "name": "Nose Wrinkler",
+      "category": "Nose",
+      "region": "Mid Face",
+      "description": "Wrinkles the nose.",
+      "muscle": ["Levator Labii Superioris Alaeque Nasi"],
+      "arkit": [
+        {
+          "blendshape": "noseSneerLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "noseSneerRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au9",
+        "order": 8
+      }
+    },
+    {
+      "id": 9,
+      "action_unit": "AU10",
+      "name": "Upper Lip Raiser",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Raises the upper lip.",
+      "muscle": ["Levator Labii Superioris"],
+      "arkit": [
+        {
+          "blendshape": "mouthUpperUpLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthUpperUpRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au10",
+        "order": 9
+      }
+    },
+    {
+      "id": 10,
+      "action_unit": "AU11",
+      "name": "Nasolabial Deepener",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "description": "Deepens the nasolabial fold.",
+      "muscle": ["Zygomaticus Minor"],
+      "arkit": [
+        {
+          "blendshape": "cheekSquintLeft",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "cheekSquintRight",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au11",
+        "order": 10
+      }
+    },
+    {
+      "id": 11,
+      "action_unit": "AU12",
+      "name": "Lip Corner Puller",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Pulls lip corners upward (smile).",
+      "muscle": ["Zygomaticus Major"],
+      "arkit": [
+        {
+          "blendshape": "mouthSmileLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthSmileRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au12",
+        "order": 11
+      }
+    },
+    {
+      "id": 12,
+      "action_unit": "AU13",
+      "name": "Cheek Puff",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "description": "Puffs the cheeks.",
+      "muscle": ["Buccinator"],
+      "arkit": [
+        {
+          "blendshape": "cheekPuff",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au13",
+        "order": 12
+      }
+    },
+    {
+      "id": 13,
+      "action_unit": "AU14",
+      "name": "Dimpler",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Creates a dimple (tightens cheek).",
+      "muscle": ["Buccinator"],
+      "arkit": [
+        {
+          "blendshape": "mouthDimpleLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthDimpleRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au14",
+        "order": 13
+      }
+    },
+    {
+      "id": 14,
+      "action_unit": "AU15",
+      "name": "Lip Corner Depressor",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Pulls lip corners downward (frown).",
+      "muscle": ["Depressor Anguli Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthFrownLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthFrownRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au15",
+        "order": 14
+      }
+    },
+    {
+      "id": 15,
+      "action_unit": "AU16",
+      "name": "Lower Lip Depressor",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Pulls lower lip downward.",
+      "muscle": ["Depressor Labii Inferioris"],
+      "arkit": [
+        {
+          "blendshape": "mouthLowerDownLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthLowerDownRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au16",
+        "order": 15
+      }
+    },
+    {
+      "id": 16,
+      "action_unit": "AU17",
+      "name": "Chin Raiser",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Raises the chin and lower lip.",
+      "muscle": ["Mentalis"],
+      "arkit": [
+        {
+          "blendshape": "mouthPressLeft",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "mouthPressRight",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au17",
+        "order": 16
+      }
+    },
+    {
+      "id": 17,
+      "action_unit": "AU18",
+      "name": "Lip Pucker",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Puckers the lips.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthPucker",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au18",
+        "order": 17
+      }
+    },
+    {
+      "id": 18,
+      "action_unit": "AU19",
+      "name": "Tongue Out",
+      "category": "Tongue",
+      "region": "Lower Face",
+      "description": "Protrudes the tongue.",
+      "muscle": ["Genioglossus"],
+      "arkit": [
+        {
+          "blendshape": "tongueOut",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au19",
+        "order": 18
+      }
+    },
+    {
+      "id": 19,
+      "action_unit": "AU20",
+      "name": "Lip Stretcher",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Stretches the lips horizontally.",
+      "muscle": ["Risorius"],
+      "arkit": [
+        {
+          "blendshape": "mouthStretchLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthStretchRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au20",
+        "order": 19
+      }
+    },
+    {
+      "id": 20,
+      "action_unit": "AU21",
+      "name": "Neck Tightener",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Tightens the neck and jaw.",
+      "muscle": ["Platysma"],
+      "arkit": [],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au21",
+        "order": 20
+      }
+    },
+    {
+      "id": 21,
+      "action_unit": "AU22",
+      "name": "Lip Funneler",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Funnels the lips (like blowing).",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthFunnel",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au22",
+        "order": 21
+      }
+    },
+    {
+      "id": 22,
+      "action_unit": "AU23",
+      "name": "Lip Tightener",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Tightens the lips (pressing together).",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthPressLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthPressRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au23",
+        "order": 22
+      }
+    },
+    {
+      "id": 23,
+      "action_unit": "AU24",
+      "name": "Lip Pressor",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Presses lips together firmly.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthClose",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au24",
+        "order": 23
+      }
+    },
+    {
+      "id": 24,
+      "action_unit": "AU25",
+      "name": "Lips Part",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Parts the lips.",
+      "muscle": ["Orbicularis Oris (relaxation)"],
+      "arkit": [
+        {
+          "blendshape": "jawOpen",
+          "weight": 0.3
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au25",
+        "order": 24
+      }
+    },
+    {
+      "id": 25,
+      "action_unit": "AU26",
+      "name": "Jaw Drop",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Drops the jaw (mouth open).",
+      "muscle": ["Digastric", "Pterygoid"],
+      "arkit": [
+        {
+          "blendshape": "jawOpen",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au26",
+        "order": 25
+      }
+    },
+    {
+      "id": 26,
+      "action_unit": "AU27",
+      "name": "Mouth Stretch",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Stretches the mouth open.",
+      "muscle": ["Digastric", "Pterygoid"],
+      "arkit": [
+        {
+          "blendshape": "jawOpen",
+          "weight": 0.7
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au27",
+        "order": 26
+      }
+    },
+    {
+      "id": 27,
+      "action_unit": "AU28",
+      "name": "Lip Suck",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Sucks the lips inward.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthShrugLower",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "mouthShrugUpper",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au28",
+        "order": 27
+      }
+    },
+    {
+      "id": 28,
+      "action_unit": "AU29",
+      "name": "Chin Stretch",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Stretches the chin downward.",
+      "muscle": ["Mentalis"],
+      "arkit": [
+        {
+          "blendshape": "mouthLowerDownLeft",
+          "weight": 0.3
+        },
+        {
+          "blendshape": "mouthLowerDownRight",
+          "weight": 0.3
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au29",
+        "order": 28
+      }
+    },
+    {
+      "id": 29,
+      "action_unit": "AU30",
+      "name": "Jaw Sideways",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Moves the jaw sideways.",
+      "muscle": ["Pterygoid"],
+      "arkit": [
+        {
+          "blendshape": "jawLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "jawRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au30",
+        "order": 29
+      }
+    },
+    {
+      "id": 30,
+      "action_unit": "AU31",
+      "name": "Jaw Clench",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Clenches the jaw.",
+      "muscle": ["Masseter", "Temporalis"],
+      "arkit": [],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au31",
+        "order": 30
+      }
+    },
+    {
+      "id": 31,
+      "action_unit": "AU32",
+      "name": "Bite",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "description": "Bites down.",
+      "muscle": ["Masseter", "Temporalis"],
+      "arkit": [],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au32",
+        "order": 31
+      }
+    },
+    {
+      "id": 32,
+      "action_unit": "AU33",
+      "name": "Eyes Turn In",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Rotates eyes inward.",
+      "muscle": ["Medial Rectus"],
+      "arkit": [
+        {
+          "blendshape": "eyeLookInLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeLookInRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au33",
+        "order": 32
+      }
+    },
+    {
+      "id": 33,
+      "action_unit": "AU34",
+      "name": "Eyes Turn Out",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Rotates eyes outward.",
+      "muscle": ["Lateral Rectus"],
+      "arkit": [
+        {
+          "blendshape": "eyeLookOutLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeLookOutRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au34",
+        "order": 33
+      }
+    },
+    {
+      "id": 34,
+      "action_unit": "AU35",
+      "name": "Eyes Look Up",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Rotates eyes upward.",
+      "muscle": ["Superior Rectus"],
+      "arkit": [
+        {
+          "blendshape": "eyeLookUpLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeLookUpRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au35",
+        "order": 34
+      }
+    },
+    {
+      "id": 35,
+      "action_unit": "AU36",
+      "name": "Eyes Look Down",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Rotates eyes downward.",
+      "muscle": ["Inferior Rectus"],
+      "arkit": [
+        {
+          "blendshape": "eyeLookDownLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeLookDownRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au36",
+        "order": 35
+      }
+    },
+    {
+      "id": 36,
+      "action_unit": "AU37",
+      "name": "Eyes Look Forward",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Eyes forward (neutral).",
+      "muscle": [],
+      "arkit": [],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au37",
+        "order": 36
+      }
+    },
+    {
+      "id": 37,
+      "action_unit": "AU38",
+      "name": "Nose Wrinkle",
+      "category": "Nose",
+      "region": "Mid Face",
+      "description": "Wrinkles the nose bridge.",
+      "muscle": ["Procerus"],
+      "arkit": [
+        {
+          "blendshape": "noseSneerLeft",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "noseSneerRight",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au38",
+        "order": 37
+      }
+    },
+    {
+      "id": 38,
+      "action_unit": "AU39",
+      "name": "Nose Flare",
+      "category": "Nose",
+      "region": "Mid Face",
+      "description": "Flaring the nostrils.",
+      "muscle": ["Dilator Naris"],
+      "arkit": [
+        {
+          "blendshape": "noseSneerLeft",
+          "weight": 0.3
+        },
+        {
+          "blendshape": "noseSneerRight",
+          "weight": 0.3
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au39",
+        "order": 38
+      }
+    },
+    {
+      "id": 39,
+      "action_unit": "AU40",
+      "name": "Cheek Raiser 2",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "description": "Alternate cheek raising.",
+      "muscle": ["Levator Anguli Oris"],
+      "arkit": [
+        {
+          "blendshape": "cheekSquintLeft",
+          "weight": 0.8
+        },
+        {
+          "blendshape": "cheekSquintRight",
+          "weight": 0.8
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au40",
+        "order": 39
+      }
+    },
+    {
+      "id": 40,
+      "action_unit": "AU41",
+      "name": "Lip Roll",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Rolls the lips inward.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthRollUpper",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "mouthRollLower",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au41",
+        "order": 40
+      }
+    },
+    {
+      "id": 41,
+      "action_unit": "AU42",
+      "name": "Lip Shrug",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "description": "Shrugs the lips.",
+      "muscle": ["Orbicularis Oris"],
+      "arkit": [
+        {
+          "blendshape": "mouthShrugLower",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "mouthShrugUpper",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au42",
+        "order": 41
+      }
+    },
+    {
+      "id": 42,
+      "action_unit": "AU43",
+      "name": "Eyes Closed",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Closes eyes tightly.",
+      "muscle": ["Orbicularis Oculi"],
+      "arkit": [
+        {
+          "blendshape": "eyeBlinkLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeBlinkRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au43",
+        "order": 42
+      }
+    },
+    {
+      "id": 43,
+      "action_unit": "AU44",
+      "name": "Squint",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Squints eyes.",
+      "muscle": ["Orbicularis Oculi"],
+      "arkit": [
+        {
+          "blendshape": "eyeSquintLeft",
+          "weight": 1.0
+        },
+        {
+          "blendshape": "eyeSquintRight",
+          "weight": 1.0
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au44",
+        "order": 43
+      }
+    },
+    {
+      "id": 44,
+      "action_unit": "AU45",
+      "name": "Blink",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Blink (rapid closure).",
+      "muscle": ["Orbicularis Oculi"],
+      "arkit": [
+        {
+          "blendshape": "eyeBlinkLeft",
+          "weight": 0.5
+        },
+        {
+          "blendshape": "eyeBlinkRight",
+          "weight": 0.5
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au45",
+        "order": 44
+      }
+    },
+    {
+      "id": 45,
+      "action_unit": "AU46",
+      "name": "Wink",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Wink one eye.",
+      "muscle": ["Orbicularis Oculi"],
+      "arkit": [
+        {
+          "blendshape": "eyeBlinkLeft",
+          "weight": 0.8
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au46",
+        "order": 45
+      }
+    },
+    {
+      "id": 46,
+      "action_unit": "AU47",
+      "name": "Eyes Turn Up",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "description": "Eyes turn upward (alternate).",
+      "muscle": ["Superior Rectus"],
+      "arkit": [
+        {
+          "blendshape": "eyeLookUpLeft",
+          "weight": 0.8
+        },
+        {
+          "blendshape": "eyeLookUpRight",
+          "weight": 0.8
+        }
+      ],
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false
+      },
+      "driver": {
+        "type": "blendshape"
+      },
+      "ui": {
+        "icon": "au47",
+        "order": 46
+      }
+    }
+  ]
+}

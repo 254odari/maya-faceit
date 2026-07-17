@@ -1,0 +1,368 @@
+{
+  "metadata": {
+    "database": "Emotion Database",
+    "database_version": "2.0.0",
+    "schema_version": "1.0.0",
+    "format_version": 1,
+    "created": "2026-07-09",
+    "modified": "2026-07-09",
+    "description": "Emotion presets for maya_faceit.",
+    "emotion_count": 18
+  },
+  "plugin": {
+    "name": "maya_faceit",
+    "version": "1.0.0",
+    "build": "Alpha",
+    "maya_version": 2026,
+    "python_version": "3.11"
+  },
+  "statistics": {
+    "primary_emotions": 8,
+    "secondary_emotions": 10,
+    "blendshape_links": 52,
+    "facs_links": 46
+  },
+  "models": {
+    "ekman": true,
+    "plutchik": true,
+    "valence_arousal": true
+  },
+  "categories": {
+    "Primary": {
+      "order": 1,
+      "color": "#2563EB"
+    },
+    "Secondary": {
+      "order": 2,
+      "color": "#9333EA"
+    },
+    "Social": {
+      "order": 3,
+      "color": "#EA580C"
+    }
+  },
+  "emotions": [
+    {
+      "id": 1,
+      "name": "Neutral",
+      "category": "Primary",
+      "description": "Relaxed resting facial expression.",
+      "valence": 0.0,
+      "arousal": 0.0,
+      "icon": "neutral",
+      "color": "#9CA3AF",
+      "blendshapes": {},
+      "facs": []
+    },
+    {
+      "id": 2,
+      "name": "Happy",
+      "category": "Primary",
+      "description": "Expression of happiness and joy.",
+      "valence": 0.95,
+      "arousal": 0.60,
+      "icon": "happy",
+      "color": "#FACC15",
+      "blendshapes": {
+        "mouthSmileLeft": 1.0,
+        "mouthSmileRight": 1.0,
+        "cheekSquintLeft": 0.65,
+        "cheekSquintRight": 0.65
+      },
+      "facs": ["AU6", "AU12"]
+    },
+    {
+      "id": 3,
+      "name": "Sad",
+      "category": "Primary",
+      "description": "Expression of sadness and sorrow.",
+      "valence": -0.90,
+      "arousal": 0.20,
+      "icon": "sad",
+      "color": "#6B7280",
+      "blendshapes": {
+        "mouthFrownLeft": 0.8,
+        "mouthFrownRight": 0.8,
+        "browInnerUp": 0.7
+      },
+      "facs": ["AU1", "AU15"]
+    },
+    {
+      "id": 4,
+      "name": "Angry",
+      "category": "Primary",
+      "description": "Expression of anger and frustration.",
+      "valence": -0.85,
+      "arousal": 0.90,
+      "icon": "angry",
+      "color": "#DC2626",
+      "blendshapes": {
+        "browDownLeft": 1.0,
+        "browDownRight": 1.0,
+        "jawForward": 0.5,
+        "mouthPressLeft": 0.7,
+        "mouthPressRight": 0.7
+      },
+      "facs": ["AU4", "AU7", "AU23"]
+    },
+    {
+      "id": 5,
+      "name": "Surprised",
+      "category": "Primary",
+      "description": "Expression of surprise and astonishment.",
+      "valence": 0.50,
+      "arousal": 0.85,
+      "icon": "surprised",
+      "color": "#F59E0B",
+      "blendshapes": {
+        "jawOpen": 0.8,
+        "browInnerUp": 0.9,
+        "eyeWideLeft": 1.0,
+        "eyeWideRight": 1.0
+      },
+      "facs": ["AU1", "AU2", "AU5", "AU26"]
+    },
+    {
+      "id": 6,
+      "name": "Fear",
+      "category": "Primary",
+      "description": "Expression of fear and anxiety.",
+      "valence": -0.80,
+      "arousal": 0.95,
+      "icon": "fear",
+      "color": "#7C3AED",
+      "blendshapes": {
+        "eyeWideLeft": 1.0,
+        "eyeWideRight": 1.0,
+        "mouthStretchLeft": 0.8,
+        "mouthStretchRight": 0.8
+      },
+      "facs": ["AU1", "AU2", "AU5", "AU20"]
+    },
+    {
+      "id": 7,
+      "name": "Disgust",
+      "category": "Primary",
+      "description": "Expression of disgust and repulsion.",
+      "valence": -0.70,
+      "arousal": 0.55,
+      "icon": "disgust",
+      "color": "#16A34A",
+      "blendshapes": {
+        "noseSneerLeft": 1.0,
+        "noseSneerRight": 1.0,
+        "mouthUpperUpLeft": 0.6,
+        "mouthUpperUpRight": 0.6
+      },
+      "facs": ["AU9", "AU10"]
+    },
+    {
+      "id": 8,
+      "name": "Contempt",
+      "category": "Primary",
+      "description": "Expression of contempt and disdain.",
+      "valence": -0.60,
+      "arousal": 0.30,
+      "icon": "contempt",
+      "color": "#8B5CF6",
+      "blendshapes": {
+        "mouthSmileLeft": 0.5
+      },
+      "facs": ["AU14"]
+    },
+    {
+      "id": 9,
+      "name": "Amused",
+      "category": "Secondary",
+      "description": "Mild amusement, light smile.",
+      "valence": 0.70,
+      "arousal": 0.35,
+      "icon": "amused",
+      "color": "#34D399",
+      "blendshapes": {
+        "mouthSmileLeft": 0.5,
+        "mouthSmileRight": 0.5,
+        "browInnerUp": 0.2
+      },
+      "facs": ["AU6", "AU12"]
+    },
+    {
+      "id": 10,
+      "name": "Curious",
+      "category": "Secondary",
+      "description": "Curiosity and interest.",
+      "valence": 0.60,
+      "arousal": 0.50,
+      "icon": "curious",
+      "color": "#60A5FA",
+      "blendshapes": {
+        "browInnerUp": 0.7,
+        "eyeWideLeft": 0.4,
+        "eyeWideRight": 0.4,
+        "mouthSmileLeft": 0.3,
+        "mouthSmileRight": 0.3
+      },
+      "facs": ["AU1", "AU2"]
+    },
+    {
+      "id": 11,
+      "name": "Confused",
+      "category": "Secondary",
+      "description": "Confusion and puzzlement.",
+      "valence": -0.30,
+      "arousal": 0.40,
+      "icon": "confused",
+      "color": "#FBBF24",
+      "blendshapes": {
+        "browDownLeft": 0.5,
+        "browDownRight": 0.5,
+        "mouthFrownLeft": 0.3,
+        "mouthFrownRight": 0.3
+      },
+      "facs": ["AU4", "AU15"]
+    },
+    {
+      "id": 12,
+      "name": "Excited",
+      "category": "Secondary",
+      "description": "High arousal excitement and enthusiasm.",
+      "valence": 0.90,
+      "arousal": 0.95,
+      "icon": "excited",
+      "color": "#F472B6",
+      "blendshapes": {
+        "eyeWideLeft": 0.8,
+        "eyeWideRight": 0.8,
+        "jawOpen": 0.5,
+        "mouthSmileLeft": 0.9,
+        "mouthSmileRight": 0.9
+      },
+      "facs": ["AU1", "AU2", "AU5", "AU12", "AU26"]
+    },
+    {
+      "id": 13,
+      "name": "Focused",
+      "category": "Secondary",
+      "description": "Focused concentration.",
+      "valence": 0.20,
+      "arousal": 0.60,
+      "icon": "focused",
+      "color": "#A78BFA",
+      "blendshapes": {
+        "browDownLeft": 0.4,
+        "browDownRight": 0.4,
+        "eyeSquintLeft": 0.5,
+        "eyeSquintRight": 0.5
+      },
+      "facs": ["AU4", "AU7"]
+    },
+    {
+      "id": 14,
+      "name": "Determined",
+      "category": "Secondary",
+      "description": "Determination and resolve.",
+      "valence": 0.50,
+      "arousal": 0.70,
+      "icon": "determined",
+      "color": "#FB923C",
+      "blendshapes": {
+        "browDownLeft": 0.8,
+        "browDownRight": 0.8,
+        "mouthPressLeft": 0.6,
+        "mouthPressRight": 0.6
+      },
+      "facs": ["AU4", "AU23"]
+    },
+    {
+      "id": 15,
+      "name": "Embarrassed",
+      "category": "Secondary",
+      "description": "Embarrassment and shyness.",
+      "valence": -0.40,
+      "arousal": 0.45,
+      "icon": "embarrassed",
+      "color": "#FCA5A5",
+      "blendshapes": {
+        "mouthSmileLeft": 0.3,
+        "mouthSmileRight": 0.3,
+        "browInnerUp": 0.3,
+        "mouthFrownLeft": 0.2,
+        "mouthFrownRight": 0.2
+      },
+      "facs": ["AU1", "AU12"]
+    },
+    {
+      "id": 16,
+      "name": "Relaxed",
+      "category": "Secondary",
+      "description": "Calm and relaxed expression.",
+      "valence": 0.50,
+      "arousal": 0.15,
+      "icon": "relaxed",
+      "color": "#6EE7B7",
+      "blendshapes": {
+        "mouthSmileLeft": 0.2,
+        "mouthSmileRight": 0.2
+      },
+      "facs": ["AU12"]
+    },
+    {
+      "id": 17,
+      "name": "Bored",
+      "category": "Secondary",
+      "description": "Boredom and disinterest.",
+      "valence": -0.40,
+      "arousal": 0.10,
+      "icon": "bored",
+      "color": "#9CA3AF",
+      "blendshapes": {
+        "mouthFrownLeft": 0.2,
+        "mouthFrownRight": 0.2
+      },
+      "facs": ["AU15"]
+    },
+    {
+      "id": 18,
+      "name": "Sleepy",
+      "category": "Secondary",
+      "description": "Sleepy and tired expression.",
+      "valence": -0.20,
+      "arousal": 0.05,
+      "icon": "sleepy",
+      "color": "#A1A1AA",
+      "blendshapes": {
+        "eyeBlinkLeft": 0.7,
+        "eyeBlinkRight": 0.7,
+        "jawOpen": 0.2
+      },
+      "facs": ["AU45"]
+    }
+  ],
+  "transitions": {
+    "blend_mode": "linear",
+    "default_duration": 0.25,
+    "allow_crossfade": true,
+    "allow_layering": true
+  },
+  "validation": {
+    "maximum_weight": 1.0,
+    "minimum_weight": 0.0,
+    "strict_schema": true,
+    "allow_unknown_blendshapes": false
+  },
+  "migration": {
+    "current_version": "2.0.0",
+    "supported_versions": ["1.0.0", "2.0.0"]
+  },
+  "ui_defaults": {
+    "show_icons": true,
+    "show_colors": true,
+    "sort_by": "category",
+    "preview_strength": 1.0
+  },
+  "defaults": {
+    "default_emotion": "Neutral",
+    "blend_time": 0.25,
+    "strength": 1.0
+  }
+}

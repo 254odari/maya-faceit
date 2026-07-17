@@ -1,0 +1,267 @@
+maya_faceit/
+
+├── install.py
+├── startup.py
+├── version.py
+├── constants.py
+├── exceptions.py
+├── config.json
+├── requirements.txt
+├── README.md
+├── LICENSE
+│
+├── application/
+│   ├── __init__.py
+│   ├── app.py
+│   ├── bootstrap.py
+│   ├── startup.py
+│   ├── shutdown.py
+│   ├── preferences.py
+│   ├── project.py
+│   ├── session.py
+│   └── registry.py
+│
+├── core/
+│   │
+│   ├── scene/
+│   │   ├── scene_manager.py
+│   │   ├── dependency_graph.py
+│   │   ├── hierarchy.py
+│   │   └── references.py
+│   │
+│   ├── validation/
+│   │   ├── validation.py
+│   │   ├── topology_validator.py
+│   │   ├── rig_validator.py
+│   │   ├── mesh_validator.py
+│   │   └── scene_validator.py
+│   │
+│   ├── pipeline/
+│   │   ├── rig_builder.py
+│   │   ├── rig_pipeline.py
+│   │   ├── facial_template.py
+│   │   └── landmark_solver.py
+│   │
+│   ├── undo/
+│   │   └── undo_manager.py
+│   │
+│   ├── logging/
+│   │   └── logger.py
+│   │
+│   ├── naming/
+│   │   └── naming.py
+│   │
+│   └── symmetry/
+│       └── symmetry.py
+│
+├── rig/
+│   ├── core/
+│   ├── joints/
+│   ├── controllers/
+│   ├── constraints/
+│   ├── deformers/
+│   ├── spaces/
+│   ├── sdk/
+│   ├── matrix/
+│   ├── attributes/
+│   ├── visibility/
+│   ├── rebuild/
+│   │
+│   └── facial/
+│       ├── jaw/
+│       ├── lips/
+│       ├── eyes/
+│       ├── eyelids/
+│       ├── brows/
+│       ├── cheeks/
+│       ├── nose/
+│       ├── tongue/
+│       ├── ears/
+│       ├── forehead/
+│       └── neck/
+│
+├── landmark/
+│   ├── detectors/
+│   │   ├── mediapipe.py
+│   │   └── detector.py
+│   ├── mapping/
+│   ├── database/
+│   ├── alignment/
+│   ├── fitting/
+│   ├── visualization/
+│   └── symmetry/
+│
+├── blendshapes/
+│   ├── core/
+│   ├── operations/
+│   ├── analysis/
+│   ├── validation/
+│   ├── io/
+│   ├── optimization/
+│   └── library/
+│
+├── arkit/
+│   ├── mapping/
+│   ├── poses/
+│   ├── calibration/
+│   ├── validation/
+│   ├── conversion/
+│   ├── analysis/
+│   └── library/
+│
+├── expressions/
+│   ├── core/
+│   ├── interpolation/
+│   ├── presets/
+│   ├── preview/
+│   ├── serialization/
+│   └── library/
+│
+├── mocap/
+│   ├── devices/
+│   │   ├── mediapipe/
+│   │   ├── livelink/
+│   │   ├── iphone/
+│   │   └── facecap/
+│   ├── processing/
+│   ├── recording/
+│   ├── playback/
+│   ├── calibration/
+│   ├── streaming/
+│   ├── retargeting/
+│   ├── baking/
+│   └── filters/
+│
+├── animation/
+│   ├── core/
+│   ├── baking/
+│   ├── curves/
+│   ├── keyframes/
+│   ├── layers/
+│   ├── constraints/
+│   ├── timeline/
+│   └── cleanup/
+│
+├── picker/
+│   ├── core/
+│   ├── widgets/
+│   ├── layouts/
+│   ├── commands/
+│   ├── hotkeys/
+│   ├── themes/
+│   ├── serialization/
+│   └── overlays/
+│
+├── tools/
+│   ├── mirror/
+│   ├── symmetry/
+│   ├── weights/
+│   ├── transfer/
+│   ├── relax/
+│   ├── smooth/
+│   ├── clean/
+│   ├── freeze/
+│   ├── optimizer/
+│   ├── mesh/
+│   ├── pose/
+│   ├── controllers/
+│   ├── selection/
+│   ├── skin/
+│   └── validation/
+│
+├── export/
+│   ├── core/
+│   ├── formats/
+│   │   ├── fbx/
+│   │   ├── usd/
+│   │   ├── alembic/
+│   │   ├── json/
+│   │   └── maya_ascii/
+│   ├── engines/
+│   │   ├── unreal/
+│   │   ├── unity/
+│   │   └── metahuman/
+│   └── packaging/
+│
+├── ui/
+│   ├── core/
+│   ├── dialogs/
+│   ├── tabs/
+│   ├── widgets/
+│   ├── resources/
+│   └── styles/
+│
+├── services/
+│   ├── cache/
+│   ├── events/
+│   ├── plugins/
+│   ├── analytics/
+│   └── localization/
+│
+├── libraries/
+│   ├── math/
+│   │   ├── vectors.py
+│   │   ├── matrices.py
+│   │   ├── quaternions.py
+│   │   ├── geometry.py
+│   │   └── interpolation.py
+│   │
+│   ├── mesh/
+│   ├── io/
+│   ├── serialization/
+│   ├── filesystem/
+│   ├── decorators/
+│   ├── threading/
+│   ├── profiling/
+│   ├── progress/
+│   ├── colors/
+│   └── compatibility/
+│       ├── maya2024.py
+│       ├── maya2025.py
+│       └── maya2026.py
+│
+├── resources/
+│   ├── icons/
+│   ├── images/
+│   ├── fonts/
+│   ├── qss/
+│   └── cursors/
+│
+├── data/
+│   ├── templates/
+│   ├── arkit/
+│   ├── presets/
+│   ├── expressions/
+│   ├── rigs/
+│   ├── controller_shapes/
+│   ├── pose_library/
+│   └── examples/
+│
+├── tests/
+│   ├── core/
+│   ├── rig/
+│   ├── landmark/
+│   ├── blendshapes/
+│   ├── arkit/
+│   ├── mocap/
+│   ├── animation/
+│   ├── export/
+│   ├── ui/
+│   ├── integration/
+│   └── performance/
+│
+├── docs/
+│   ├── architecture/
+│   ├── api/
+│   ├── developer/
+│   ├── tutorials/
+│   ├── user/
+│   └── images/
+│
+├── shelves/
+└── scripts/
+    ├── build.py
+    ├── package.py
+    ├── install_dev.py
+    ├── generate_docs.py
+    └── run_tests.py

@@ -1,0 +1,1699 @@
+{
+  "database": {
+    "name": "ARKit Blendshape Database",
+    "version": "2.0.0",
+    "schema_version": "1.0.0",
+    "format_version": 1,
+    "created": "2026-07-09",
+    "modified": "2026-07-09",
+    "description": "Official Apple ARKit 52 Blendshape Database for maya_faceit.",
+    "source": "Apple ARKit",
+    "blendshape_count": 52
+  },
+  "metadata": {
+    "name": "maya_faceit",
+    "version": "1.0.0",
+    "build": "Alpha",
+    "author": "maya_faceit",
+    "license": "MIT",
+    "maya_version": 2026,
+    "python_version": "3.11"
+  },
+  "statistics": {
+    "total_channels": 52,
+    "left_channels": 22,
+    "right_channels": 22,
+    "center_channels": 8,
+    "categories": 7
+  },
+  "categories": {
+    "Brows": {
+      "order": 1,
+      "color": "#B7791F"
+    },
+    "Eyes": {
+      "order": 2,
+      "color": "#2563EB"
+    },
+    "Cheeks": {
+      "order": 3,
+      "color": "#16A34A"
+    },
+    "Nose": {
+      "order": 4,
+      "color": "#DC2626"
+    },
+    "Jaw": {
+      "order": 5,
+      "color": "#7C3AED"
+    },
+    "Mouth": {
+      "order": 6,
+      "color": "#EA580C"
+    },
+    "Tongue": {
+      "order": 7,
+      "color": "#DB2777"
+    }
+  },
+  "regions": {
+    "Upper Face": ["Brows", "Eyes"],
+    "Mid Face": ["Cheeks", "Nose"],
+    "Lower Face": ["Jaw", "Mouth", "Tongue"]
+  },
+  "validation": {
+    "minimum": 0.0,
+    "maximum": 1.0,
+    "default": 0.0,
+    "strict_schema": true,
+    "allow_duplicates": false,
+    "allow_unknown_channels": false,
+    "case_sensitive": true
+  },
+  "version": {
+    "current_version": "2.0.0",
+    "supported_versions": ["1.0.0", "2.0.0"]
+  },
+  "ui": {
+    "theme": "dark",
+    "show_icons": true,
+    "show_colors": true,
+    "show_regions": true,
+    "display_names": true,
+    "collapsed_categories": false
+  },
+  "channels": [
+    {
+      "id": 0,
+      "name": "browDownLeft",
+      "display_name": "Brow Down Left",
+      "category": "Brows",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Moves the left eyebrow downward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "browDownRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "brow_down_left",
+        "order": 1
+      },
+      "keywords": ["brow", "eyebrow", "left"]
+    },
+    {
+      "id": 1,
+      "name": "browDownRight",
+      "display_name": "Brow Down Right",
+      "category": "Brows",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Moves the right eyebrow downward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "browDownLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "brow_down_right",
+        "order": 2
+      },
+      "keywords": ["brow", "eyebrow", "right"]
+    },
+    {
+      "id": 2,
+      "name": "browInnerUp",
+      "display_name": "Brow Inner Up",
+      "category": "Brows",
+      "region": "Upper Face",
+      "side": "Center",
+      "description": "Raises the inner part of the eyebrows.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "brow_inner_up",
+        "order": 3
+      },
+      "keywords": ["brow", "eyebrow", "inner", "up"]
+    },
+    {
+      "id": 3,
+      "name": "browOuterUpLeft",
+      "display_name": "Brow Outer Up Left",
+      "category": "Brows",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Raises the outer part of the left eyebrow.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "browOuterUpRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "brow_outer_up_left",
+        "order": 4
+      },
+      "keywords": ["brow", "eyebrow", "outer", "left", "up"]
+    },
+    {
+      "id": 4,
+      "name": "browOuterUpRight",
+      "display_name": "Brow Outer Up Right",
+      "category": "Brows",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Raises the outer part of the right eyebrow.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "browOuterUpLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "brow_outer_up_right",
+        "order": 5
+      },
+      "keywords": ["brow", "eyebrow", "outer", "right", "up"]
+    },
+    {
+      "id": 5,
+      "name": "cheekPuff",
+      "display_name": "Cheek Puff",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "side": "Center",
+      "description": "Puffs out the cheeks.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "cheek_puff",
+        "order": 6
+      },
+      "keywords": ["cheek", "puff"]
+    },
+    {
+      "id": 6,
+      "name": "cheekSquintLeft",
+      "display_name": "Cheek Squint Left",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "side": "Left",
+      "description": "Raises the left cheek (squint).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "cheekSquintRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "cheek_squint_left",
+        "order": 7
+      },
+      "keywords": ["cheek", "squint", "left"]
+    },
+    {
+      "id": 7,
+      "name": "cheekSquintRight",
+      "display_name": "Cheek Squint Right",
+      "category": "Cheeks",
+      "region": "Mid Face",
+      "side": "Right",
+      "description": "Raises the right cheek (squint).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "cheekSquintLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "cheek_squint_right",
+        "order": 8
+      },
+      "keywords": ["cheek", "squint", "right"]
+    },
+    {
+      "id": 8,
+      "name": "eyeBlinkLeft",
+      "display_name": "Eye Blink Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Blinks the left eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeBlinkRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_blink_left",
+        "order": 9
+      },
+      "keywords": ["eye", "blink", "left"]
+    },
+    {
+      "id": 9,
+      "name": "eyeBlinkRight",
+      "display_name": "Eye Blink Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Blinks the right eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeBlinkLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_blink_right",
+        "order": 10
+      },
+      "keywords": ["eye", "blink", "right"]
+    },
+    {
+      "id": 10,
+      "name": "eyeLookDownLeft",
+      "display_name": "Eye Look Down Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Left eye looks downward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookDownRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_down_left",
+        "order": 11
+      },
+      "keywords": ["eye", "look", "down", "left"]
+    },
+    {
+      "id": 11,
+      "name": "eyeLookDownRight",
+      "display_name": "Eye Look Down Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Right eye looks downward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookDownLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_down_right",
+        "order": 12
+      },
+      "keywords": ["eye", "look", "down", "right"]
+    },
+    {
+      "id": 12,
+      "name": "eyeLookInLeft",
+      "display_name": "Eye Look In Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Left eye looks inward (toward nose).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookInRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_in_left",
+        "order": 13
+      },
+      "keywords": ["eye", "look", "in", "left"]
+    },
+    {
+      "id": 13,
+      "name": "eyeLookInRight",
+      "display_name": "Eye Look In Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Right eye looks inward (toward nose).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookInLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_in_right",
+        "order": 14
+      },
+      "keywords": ["eye", "look", "in", "right"]
+    },
+    {
+      "id": 14,
+      "name": "eyeLookOutLeft",
+      "display_name": "Eye Look Out Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Left eye looks outward (away from nose).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookOutRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_out_left",
+        "order": 15
+      },
+      "keywords": ["eye", "look", "out", "left"]
+    },
+    {
+      "id": 15,
+      "name": "eyeLookOutRight",
+      "display_name": "Eye Look Out Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Right eye looks outward (away from nose).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookOutLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_out_right",
+        "order": 16
+      },
+      "keywords": ["eye", "look", "out", "right"]
+    },
+    {
+      "id": 16,
+      "name": "eyeLookUpLeft",
+      "display_name": "Eye Look Up Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Left eye looks upward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookUpRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_up_left",
+        "order": 17
+      },
+      "keywords": ["eye", "look", "up", "left"]
+    },
+    {
+      "id": 17,
+      "name": "eyeLookUpRight",
+      "display_name": "Eye Look Up Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Right eye looks upward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeLookUpLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_look_up_right",
+        "order": 18
+      },
+      "keywords": ["eye", "look", "up", "right"]
+    },
+    {
+      "id": 18,
+      "name": "eyeSquintLeft",
+      "display_name": "Eye Squint Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Squints the left eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeSquintRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_squint_left",
+        "order": 19
+      },
+      "keywords": ["eye", "squint", "left"]
+    },
+    {
+      "id": 19,
+      "name": "eyeSquintRight",
+      "display_name": "Eye Squint Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Squints the right eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeSquintLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_squint_right",
+        "order": 20
+      },
+      "keywords": ["eye", "squint", "right"]
+    },
+    {
+      "id": 20,
+      "name": "eyeWideLeft",
+      "display_name": "Eye Wide Left",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Left",
+      "description": "Widens the left eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeWideRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_wide_left",
+        "order": 21
+      },
+      "keywords": ["eye", "wide", "left"]
+    },
+    {
+      "id": 21,
+      "name": "eyeWideRight",
+      "display_name": "Eye Wide Right",
+      "category": "Eyes",
+      "region": "Upper Face",
+      "side": "Right",
+      "description": "Widens the right eye.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "eyeWideLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "eye_wide_right",
+        "order": 22
+      },
+      "keywords": ["eye", "wide", "right"]
+    },
+    {
+      "id": 22,
+      "name": "jawForward",
+      "display_name": "Jaw Forward",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Protrudes the jaw forward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "jaw_forward",
+        "order": 23
+      },
+      "keywords": ["jaw", "forward", "protrude"]
+    },
+    {
+      "id": 23,
+      "name": "jawLeft",
+      "display_name": "Jaw Left",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Moves the jaw to the left.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "jawRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "jaw_left",
+        "order": 24
+      },
+      "keywords": ["jaw", "left", "side"]
+    },
+    {
+      "id": 24,
+      "name": "jawOpen",
+      "display_name": "Jaw Open",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Opens the jaw.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "jaw_open",
+        "order": 25
+      },
+      "keywords": ["jaw", "open", "drop"]
+    },
+    {
+      "id": 25,
+      "name": "jawRight",
+      "display_name": "Jaw Right",
+      "category": "Jaw",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Moves the jaw to the right.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "jawLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "jaw_right",
+        "order": 26
+      },
+      "keywords": ["jaw", "right", "side"]
+    },
+    {
+      "id": 26,
+      "name": "mouthClose",
+      "display_name": "Mouth Close",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Closes the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_close",
+        "order": 27
+      },
+      "keywords": ["mouth", "close", "lip"]
+    },
+    {
+      "id": 27,
+      "name": "mouthDimpleLeft",
+      "display_name": "Mouth Dimple Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Creates a dimple on the left side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthDimpleRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_dimple_left",
+        "order": 28
+      },
+      "keywords": ["mouth", "dimple", "left"]
+    },
+    {
+      "id": 28,
+      "name": "mouthDimpleRight",
+      "display_name": "Mouth Dimple Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Creates a dimple on the right side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthDimpleLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_dimple_right",
+        "order": 29
+      },
+      "keywords": ["mouth", "dimple", "right"]
+    },
+    {
+      "id": 29,
+      "name": "mouthFrownLeft",
+      "display_name": "Mouth Frown Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Frowns on the left side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthFrownRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_frown_left",
+        "order": 30
+      },
+      "keywords": ["mouth", "frown", "left"]
+    },
+    {
+      "id": 30,
+      "name": "mouthFrownRight",
+      "display_name": "Mouth Frown Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Frowns on the right side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthFrownLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_frown_right",
+        "order": 31
+      },
+      "keywords": ["mouth", "frown", "right"]
+    },
+    {
+      "id": 31,
+      "name": "mouthFunnel",
+      "display_name": "Mouth Funnel",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Purses the lips inward (funnel).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_funnel",
+        "order": 32
+      },
+      "keywords": ["mouth", "funnel", "pucker"]
+    },
+    {
+      "id": 32,
+      "name": "mouthLeft",
+      "display_name": "Mouth Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Moves the mouth to the left.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_left",
+        "order": 33
+      },
+      "keywords": ["mouth", "left", "side"]
+    },
+    {
+      "id": 33,
+      "name": "mouthLowerDownLeft",
+      "display_name": "Mouth Lower Down Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Pulls the lower lip downward on the left.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthLowerDownRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_lower_down_left",
+        "order": 34
+      },
+      "keywords": ["mouth", "lower", "down", "left"]
+    },
+    {
+      "id": 34,
+      "name": "mouthLowerDownRight",
+      "display_name": "Mouth Lower Down Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Pulls the lower lip downward on the right.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthLowerDownLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_lower_down_right",
+        "order": 35
+      },
+      "keywords": ["mouth", "lower", "down", "right"]
+    },
+    {
+      "id": 35,
+      "name": "mouthPressLeft",
+      "display_name": "Mouth Press Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Presses the left side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthPressRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_press_left",
+        "order": 36
+      },
+      "keywords": ["mouth", "press", "left"]
+    },
+    {
+      "id": 36,
+      "name": "mouthPressRight",
+      "display_name": "Mouth Press Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Presses the right side of the mouth.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthPressLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_press_right",
+        "order": 37
+      },
+      "keywords": ["mouth", "press", "right"]
+    },
+    {
+      "id": 37,
+      "name": "mouthPucker",
+      "display_name": "Mouth Pucker",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Puckers the mouth (kiss shape).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_pucker",
+        "order": 38
+      },
+      "keywords": ["mouth", "pucker", "kiss"]
+    },
+    {
+      "id": 38,
+      "name": "mouthRight",
+      "display_name": "Mouth Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Moves the mouth to the right.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_right",
+        "order": 39
+      },
+      "keywords": ["mouth", "right", "side"]
+    },
+    {
+      "id": 39,
+      "name": "mouthRollLower",
+      "display_name": "Mouth Roll Lower",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Rolls the lower lip outward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_roll_lower",
+        "order": 40
+      },
+      "keywords": ["mouth", "roll", "lower"]
+    },
+    {
+      "id": 40,
+      "name": "mouthRollUpper",
+      "display_name": "Mouth Roll Upper",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Rolls the upper lip outward.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_roll_upper",
+        "order": 41
+      },
+      "keywords": ["mouth", "roll", "upper"]
+    },
+    {
+      "id": 41,
+      "name": "mouthShrugLower",
+      "display_name": "Mouth Shrug Lower",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Shrugs the lower lip (outward and down).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_shrug_lower",
+        "order": 42
+      },
+      "keywords": ["mouth", "shrug", "lower"]
+    },
+    {
+      "id": 42,
+      "name": "mouthShrugUpper",
+      "display_name": "Mouth Shrug Upper",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Shrugs the upper lip (outward and up).",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_shrug_upper",
+        "order": 43
+      },
+      "keywords": ["mouth", "shrug", "upper"]
+    },
+    {
+      "id": 43,
+      "name": "mouthSmileLeft",
+      "display_name": "Mouth Smile Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Smiles on the left side.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthSmileRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_smile_left",
+        "order": 44
+      },
+      "keywords": ["mouth", "smile", "left"]
+    },
+    {
+      "id": 44,
+      "name": "mouthSmileRight",
+      "display_name": "Mouth Smile Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Smiles on the right side.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthSmileLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_smile_right",
+        "order": 45
+      },
+      "keywords": ["mouth", "smile", "right"]
+    },
+    {
+      "id": 45,
+      "name": "mouthStretchLeft",
+      "display_name": "Mouth Stretch Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Stretches the mouth to the left.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthStretchRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_stretch_left",
+        "order": 46
+      },
+      "keywords": ["mouth", "stretch", "left"]
+    },
+    {
+      "id": 46,
+      "name": "mouthStretchRight",
+      "display_name": "Mouth Stretch Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Stretches the mouth to the right.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthStretchLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_stretch_right",
+        "order": 47
+      },
+      "keywords": ["mouth", "stretch", "right"]
+    },
+    {
+      "id": 47,
+      "name": "mouthUpperUpLeft",
+      "display_name": "Mouth Upper Up Left",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Left",
+      "description": "Pulls the upper lip upward on the left.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthUpperUpRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_upper_up_left",
+        "order": 48
+      },
+      "keywords": ["mouth", "upper", "up", "left"]
+    },
+    {
+      "id": 48,
+      "name": "mouthUpperUpRight",
+      "display_name": "Mouth Upper Up Right",
+      "category": "Mouth",
+      "region": "Lower Face",
+      "side": "Right",
+      "description": "Pulls the upper lip upward on the right.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "mouthUpperUpLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "mouth_upper_up_right",
+        "order": 49
+      },
+      "keywords": ["mouth", "upper", "up", "right"]
+    },
+    {
+      "id": 49,
+      "name": "noseSneerLeft",
+      "display_name": "Nose Sneer Left",
+      "category": "Nose",
+      "region": "Mid Face",
+      "side": "Left",
+      "description": "Sneers the nose on the left side.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "noseSneerRight"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "nose_sneer_left",
+        "order": 50
+      },
+      "keywords": ["nose", "sneer", "left"]
+    },
+    {
+      "id": 50,
+      "name": "noseSneerRight",
+      "display_name": "Nose Sneer Right",
+      "category": "Nose",
+      "region": "Mid Face",
+      "side": "Right",
+      "description": "Sneers the nose on the right side.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": true,
+        "partner": "noseSneerLeft"
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": true,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "nose_sneer_right",
+        "order": 51
+      },
+      "keywords": ["nose", "sneer", "right"]
+    },
+    {
+      "id": 51,
+      "name": "tongueOut",
+      "display_name": "Tongue Out",
+      "category": "Tongue",
+      "region": "Lower Face",
+      "side": "Center",
+      "description": "Sticks the tongue out.",
+      "default": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "symmetry": {
+        "enabled": false,
+        "partner": null
+      },
+      "animation": {
+        "animatable": true,
+        "streamable": true,
+        "mirrorable": false,
+        "corrective": false
+      },
+      "driver": {
+        "type": "blendshape",
+        "default_weight": 1.0
+      },
+      "ui": {
+        "icon": "tongue_out",
+        "order": 52
+      },
+      "keywords": ["tongue", "out", "protrude"]
+    }
+  ]
+}
