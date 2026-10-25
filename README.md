@@ -19,8 +19,8 @@ This branch is a **baseline repair**, not a finished tool:
   assets (this requires Blender, which is not part of this baseline).
 - Operator/UI behaviour has not been validated against the Blender original.
 
-The previous 215k-line generated scaffold was removed from this branch; it remains
-on `main` for reference.
+The previous 215k-line generated scaffold was removed; it remains available in
+earlier git history.
 
 ## Layout
 
