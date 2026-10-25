@@ -5,6 +5,8 @@ rigging add-on) to Autodesk Maya 2026.
 
 The original add-on is GPL-3.0-or-later, so this port is too (see `LICENSE`).
 
+For licensing inquiries, contact: odaribensona@email.com
+
 ## Status: baseline
 
 This branch is a **baseline repair**, not a finished tool:
