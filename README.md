@@ -1,90 +1,84 @@
-# Maya FaceIT
+# FaceIT for Maya
 
-A professional facial rigging and animation toolkit for Maya.
+A work-in-progress port of [FaceIt](https://faceit-doc.readthedocs.io/) (Blender facial
+rigging add-on) to Autodesk Maya 2026.
 
-## Features
+The original add-on is GPL-3.0-or-later, so this port is too (see `LICENSE`).
 
-- 🎭 Facial Control Picker
-- 🔄 Mirroring Engine
-- 🧠 Symmetry Analysis
-- 💪 Weight Tools
-- 🎨 Pose Management
-- 🎯 Blendshape Editor
-- 🚀 Performance Optimizer
-- 📦 Export to FBX, USD, Alembic
-- 🎮 Game Engine Integration (Unreal, Unity, MetaHuman)
+## Status: baseline
 
-## Installation
+This branch is a **baseline repair**, not a finished tool:
 
-### From Maya Script Editor
+- The package imports cleanly into Maya 2026 (116 modules) and loads/unloads as a
+  plugin in headless mode; 120 operators and 6 scene callbacks register.
+- Expression libraries and retarget presets are present under `maya_faceit/resources/`.
+- `FaceitRig.ma`, `FaceitControlRig.ma` and `FaceitLandmarks.ma` are stubs or absent;
+  the rigging/binding stages are not usable until they are rebuilt from the Blender
+  assets (this requires Blender, which is not part of this baseline).
+- Operator/UI behaviour has not been validated against the Blender original.
+
+The previous 215k-line generated scaffold was removed from this branch; it remains
+on `main` for reference.
+
+## Layout
+
+```
+faceit_maya.py        Maya plugin entry point (initializePlugin / uninitializePlugin)
+faceit_maya.mod       Maya module descriptor (the file Maya actually discovers)
+module.json           Module metadata
+maya_faceit/
+  core/               ARKit shape data, scene data, mesh/vgroup/modifier utilities
+  properties/         Scene property definitions
+  setup/              Object registration and group assignment
+  landmarks/          Landmark placement
+  rigging/            Rig generation and joining
+  bind/               Binding the face mesh to the rig
+  ctrl_rig/           Control rig generation, drivers, custom sliders
+  shape_keys/         Shape key and corrective shape authoring
+  expressions/        (reserved)
+  animate/            Expression animation
+  mocap/              FaceCap / iFacialMocap / LiveLinkFace / OSC receivers
+  retargeting/        ARKit retarget list
+  retarget_fbx/       FBX retarget presets
+  bake/               Bake shape keys and modifiers
+  finalize/           Finalize rig
+  panels/             UI
+  resources/          .face expression libraries, retarget presets
+```
+
+## Install
+
+1. Add the repository directory itself to `MAYA_MODULE_PATH` (for example in
+   `Documents/maya/2026/Maya.env`):
+
+   ```
+   MAYA_MODULE_PATH += /path/to/maya-faceit
+   ```
+
+   Alternatively, copy `faceit_maya.mod` into `Documents/maya/modules/` and change
+   the path on the `+` line to the repository location.
+
+2. Restart Maya and load the plugin:
 
 ```python
-import maya_faceit.install
-maya_faceit.install.install()
+import maya.cmds as cmds
+cmds.loadPlugin("faceit_maya.py")
+```
 
-Manual Installation
-Clone the repository:
+Or for development, without installing as a module:
 
-text
-git clone https://github.com/yourusername/maya_faceit.git
-Copy the maya_faceit folder to your Maya scripts directory:
-
-Windows: ~/Documents/maya/scripts/
-
-macOS: ~/Library/Preferences/Autodesk/maya/scripts/
-
-Linux: ~/maya/scripts/
-
-Add the following to your userSetup.py:
-
-python
+```python
+import sys
+sys.path.insert(0, "/path/to/maya-faceit")
 import maya_faceit
-maya_faceit.bootstrap()
-maya_faceit.startup()
-Quick Start
-python
-import maya_faceit
-maya_faceit.show()
-Documentation
-Full documentation is available at https://github.com/yourusername/maya_faceit/wiki
+maya_faceit.initializePlugin(None)
+```
 
-License
-This project is proprietary software. See the LICENSE file for details.
+## Known limitations
 
-Authors
-Maya FaceIT Team
-
-Support
-For issues and feature requests, please use the GitHub issue tracker.
-
-text
-
----
-
-## `LICENSE`
-Maya FaceIT License
-Copyright (c) 2024 Maya FaceIT Team
-
-This software is proprietary and confidential. Unauthorized copying,
-distribution, or use of this software is prohibited.
-
-All rights reserved.
-
-Permission is hereby granted to use this software for evaluation and
-personal use only, provided that this notice and copyright information
-is retained. Commercial use requires a separate license from the authors.
-
-This software is provided "AS IS", without warranty of any kind,
-express or implied, including but not limited to the warranties of
-merchantability, fitness for a particular purpose, and noninfringement.
-
-The authors shall not be liable for any claim, damages, or other liability
-arising from the use of this software.
-
-For licensing inquiries, contact: your@email.com
-
-text
-
----
-
-These files provide a complete foundation for the Maya FaceIT plugin, including installation, startup, configuration, and core constants. All modules follow the same patterns and standards as the rest of the plugin codebase.
+- `FaceitRig.ma` is a placeholder; rigging/binding stages are not usable yet.
+- Blender-specific concepts (shape keys, modifiers, drivers) were remapped to Maya
+  blendShapes and utility nodes only at the API level; behaviour is unverified.
+- The original `.face` expression files describe poses for a Rigify rig, which has
+  no Maya equivalent. They are kept as data until the Maya rig defines matching
+  control names.

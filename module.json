@@ -1,0 +1,26 @@
+{
+    "ModuleName": "FaceIT for Maya",
+    "ModuleVersion": "1.0.0",
+    "Description": "Facial rigging and animation toolkit for Maya 2026, ported from FaceIt (Blender).",
+    "Authors": ["254odari"],
+    "Copyright": "Copyright (c) 2024-2026",
+    "License": "GPL-3.0-or-later",
+    "URL": "https://github.com/254odari/maya-faceit",
+    "Platforms": ["Windows", "macOS", "Linux"],
+    "MayaVersions": ["2026"],
+    "Modules": [
+        {
+            "Type": "Python",
+            "Path": "."
+        }
+    ],
+    "Environment": {
+        "PYTHONPATH": ["."],
+        "MAYA_SCRIPT_PATH": ["."],
+        "MAYA_PLUG_IN_PATH": ["."]
+    },
+    "Load": ["faceit_maya.py"],
+    "Required": {
+        "Maya": "2026"
+    }
+}

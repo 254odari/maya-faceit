@@ -1,0 +1,34 @@
+{
+    "ModuleName": "Faceit for Maya",
+    "ModuleVersion": "1.0.0",
+    "Description": "Facial Rigging and Animation Toolkit for Maya 2026",
+    "Authors": ["Faceit Team"],
+    "Copyright": "Copyright (c) 2024",
+    "License": "MIT",
+    "URL": "https://faceit-doc.readthedocs.io/",
+    "Platforms": ["Windows", "macOS", "Linux"],
+    "MayaVersions": ["2026"],
+    "Modules": [
+        {
+            "Type": "Python",
+            "Path": "scripts/maya_faceit"
+        }
+    ],
+    "Environment": {
+        "PYTHONPATH": [
+            "scripts"
+        ],
+        "MAYA_SCRIPT_PATH": [
+            "scripts"
+        ],
+        "MAYA_PLUG_IN_PATH": [
+            "plugins"
+        ]
+    },
+    "Load": [
+        "faceit_maya.py"
+    ],
+    "Required": {
+        "Maya": "2026"
+    }
+}
