@@ -81,7 +81,7 @@ merchantability, fitness for a particular purpose, and noninfringement.
 The authors shall not be liable for any claim, damages, or other liability
 arising from the use of this software.
 
-For licensing inquiries, contact: your@email.com
+For licensing inquiries, contact: odaribensona@email.com
 
 text
 
